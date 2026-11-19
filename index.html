@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101512" />
+  <meta name="description" content="ROAM is a cinematic personal travel vlog. Films, memories, and stories from the road." />
+  <meta property="og:title" content="ROAM — A Video Journal" />
+  <meta property="og:description" content="Go somewhere. Feel everything. A home for films and stories from the road." />
+  <meta property="og:type" content="website" />
+  <title>ROAM — A Video Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#films">Skip to videos</a>
+  <header class="site-header" id="home">
+    <div class="nav-shell">
+      <a href="#home" class="brand" aria-label="ROAM home"><span class="brand-glyph">✳</span> ROAM<span class="brand-dot">.</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#films">The films</a>
+        <a href="#journal">Journal</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="nav-actions"><span class="nav-label"><span class="online-dot"></span> MY VIDEO JOURNAL</span><a class="header-cta" href="#films">Explore <span aria-hidden="true">↗</span></a><button id="menu-toggle" class="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">☰</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Sunlit mountains and a valley"></div>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <span class="eyebrow hero-eyebrow"><span class="star-icon">✳</span> A COLLECTION OF PLACES & FEELINGS <span class="line"></span> EST. 2026</span>
+          <h1 id="hero-title">GO SOMEWHERE.<br /><em>FEEL EVERYTHING.</em></h1>
+          <p>The best stories happen when you take the long way around. A little corner of the internet for places, people, and moments worth remembering.</p>
+          <div class="hero-buttons"><a href="#watch/nepal-beyond-the-clouds" class="btn btn-accent"><span class="btn-circle">▶</span> Watch the featured film</a><a href="#films" class="btn btn-ghost">Explore all films <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="hero-bottom">
+          <div class="hero-meta"><span class="tiny-caps">NOW PLAYING / SAMPLE FILM 001</span><strong>Nepal, beyond the clouds</strong><span>Featuring Nepal Tourism Board footage</span></div>
+          <div class="hero-index"><span>01</span><span class="index-line"></span><span>03</span></div>
+          <a class="scroll-cue" href="#films">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-side-label">LIFE LOOKS BETTER OUT THERE —</div>
+    </section>
+
+    <div class="marquee-band" aria-hidden="true"><div class="marquee-track">THE WORLD IS WIDE <span>✳</span> GO FIND YOUR STORY <span>✳</span> STAY A LITTLE LONGER <span>✳</span> THE WORLD IS WIDE <span>✳</span> GO FIND YOUR STORY <span>✳</span> STAY A LITTLE LONGER <span>✳</span></div></div>
+
+    <section class="films-section section-pad" id="films" aria-labelledby="films-title">
+      <div class="container">
+        <div class="section-topline"><span class="eyebrow dark-eyebrow"><span class="accent-star">✳</span> THE VIDEO DIARY</span><span class="section-counter">01 / THE FILMS</span></div>
+        <div class="section-heading"><div><h2 id="films-title">Moments on <em>film.</em></h2><p>A visual diary of the places that stay with you long after you've left.</p></div><span class="handwritten">little moments, big feelings <span>↘</span></span></div>
+        <div class="film-toolbar">
+          <div class="filters" id="filters" role="group" aria-label="Filter videos">
+            <button class="filter-chip active" type="button" data-filter="All" aria-pressed="true">All films</button>
+            <button class="filter-chip" type="button" data-filter="Nature" aria-pressed="false">Nature</button>
+            <button class="filter-chip" type="button" data-filter="City" aria-pressed="false">City life</button>
+            <button class="filter-chip" type="button" data-filter="Slow" aria-pressed="false">Slow days</button>
+            <button class="filter-chip" type="button" data-filter="Saved" aria-pressed="false">♡ Saved</button>
+          </div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search films</span><input id="search" type="search" placeholder="Search stories..." /></label>
+        </div>
+        <div class="results-meta"><span id="results-count">Showing films</span><span class="demo-marker"><span class="online-dot"></span> SAMPLE CONTENT</span></div>
+        <div class="film-grid" id="film-grid" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden><span>✳</span><h3>Nothing in this chapter. Yet.</h3><p>Try another category, clear your search, or save a film to find it here.</p><button id="reset-search" type="button" class="btn btn-accent">Show all films ↗</button></div>
+        <div class="all-films-note"><span>✳</span> THESE ARE DEMO STORIES. REPLACE THEM WITH YOUR OWN FILMS IN THE SITE CONTENT FILE. <span>✳</span></div>
+      </div>
+    </section>
+
+    <section class="feature-strip" id="journal" aria-labelledby="journal-title">
+      <div class="feature-photo"><div class="image-label">THE JOURNAL / NOTES FROM THE ROAD</div></div>
+      <div class="feature-copy">
+        <span class="eyebrow dark-eyebrow">✳ MORE THAN JUST THE HIGHLIGHTS</span>
+        <h2 id="journal-title">The good stuff<br />is <em>in between.</em></h2>
+        <p>The missed trains. The unexpected detours. The conversations with strangers. Not every story needs a destination, and not every moment needs a perfect frame.</p>
+        <p>Here's a place for the little notes, behind-the-scenes moments, and everything that doesn't fit into a 60-second highlight reel.</p>
+        <a href="#about" class="text-link">A little more about this journal <span aria-hidden="true">↗</span></a>
+        <div class="feature-number">02 <span> / STORIES</span></div>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-visual"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1100&q=82&fit=crop" loading="lazy" alt="Sunlit green landscape on the road" /><span class="picture-sticker">WHERE TO NEXT? ↗</span></div>
+        <div class="about-copy"><span class="eyebrow dark-eyebrow">✳ A NOTE FROM BEHIND THE CAMERA</span><h2 id="about-title">Hey, I'm<br /><em>the storyteller.</em></h2><p class="about-lead">A curious human with a camera, an overpacked bag, and a habit of taking the scenic route.</p><p>This is your space to introduce yourself. Talk about what you film, where you travel, and why you started sharing videos. Replace this sample text with your own story before you launch.</p><div class="about-rule"></div><div class="about-mini"><span>✳ FILMS & STORIES</span><span>✳ NEW PLACES</span><span>✳ REAL MOMENTS</span></div><a href="mailto:hello@example.com?subject=Hello%20from%20your%20vlog%20website" class="btn btn-dark">Say hello <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="closing-section" aria-labelledby="closing-title"><div class="closing-bg"></div><div class="closing-inner container"><span class="eyebrow">THE NEXT CHAPTER IS WAITING</span><h2 id="closing-title">SOMEWHERE OUT THERE,<br /><em>THERE'S A STORY.</em></h2><p>See something beautiful. Stay curious. Keep going.</p><a href="#films" class="btn btn-accent">Watch the films <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="#home"><span class="brand-glyph">✳</span> ROAM<span class="brand-dot">.</span></a><p>For the stories that deserve more<br />than a camera roll.</p></div><div class="footer-links"><div><span>NAVIGATE</span><a href="#films">The films</a><a href="#journal">Journal</a><a href="#about">About</a></div><div><span>CONNECT</span><a href="mailto:hello@example.com?subject=Let's%20collaborate">Get in touch ↗</a><a href="#home">Back to top ↑</a></div></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> ROAM. MADE FOR THE JOURNEY.</span><span>DEMO WEBSITE · SAMPLE FILMS ARE CREDITED TO THEIR CREATORS</span></div></div></footer>
+
+  <div class="modal-backdrop" id="video-modal" hidden><section class="video-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button type="button" id="modal-close" class="modal-close" aria-label="Close video">✕</button><div id="player-shell" class="player-shell"></div><div class="modal-details"><div class="modal-kicker" id="modal-kicker"></div><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-footer"><span id="modal-credit"></span><a id="external-video" href="#" target="_blank" rel="noopener noreferrer" hidden>Watch on YouTube ↗</a></div></div></section></div>
+</body>
+</html>
